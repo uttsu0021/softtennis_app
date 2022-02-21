@@ -1,0 +1,15 @@
+.second-header {
+  width: 100%;
+  min-width: 800px;
+  height: 130px;
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.second-header-text {
+  font-size: 30px;
+  color: yellow;
+  text-decoration: none;
+}

@@ -1,0 +1,28 @@
+.fotter {
+  width: 100%;
+  min-width: 800px;
+  height: 200px;
+  background-color: #555555;
+  display: flex;
+
+  flex-direction: column;
+}
+
+.fotter-text-wrap {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.fotter-text {
+  color: white;
+  font-size: 12px;
+  margin: 0 10px;
+}
+
+.fotter-logo {
+  font-size: 30px;
+  color: yellow;
+  padding: 30px 0;
+  margin: auto;
+}
