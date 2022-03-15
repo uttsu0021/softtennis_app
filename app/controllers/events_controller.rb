@@ -6,4 +6,10 @@ class EventsController < ApplicationController
   def new
     @events = Event.new
   end
+
+  private
+
+  def event_params
+    params.require(:event).permit(:image)
+  end
 end
