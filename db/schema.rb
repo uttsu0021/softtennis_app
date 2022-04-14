@@ -36,11 +36,11 @@ ActiveRecord::Schema.define(version: 2022_02_23_115632) do
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "event", null: false
     t.string "category", null: false
-    t.integer "date", null: false
-    t.integer "prefectures", null: false
+    t.string "date", null: false
+    t.string "prefectures", null: false
     t.string "venue", null: false
-    t.integer "fee", null: false
-    t.integer "deadline", null: false
+    t.string "fee", null: false
+    t.string "deadline", null: false
     t.text "explanation", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
