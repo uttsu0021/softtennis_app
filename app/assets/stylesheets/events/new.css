@@ -1,3 +1,16 @@
+.title-softeni {
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+}
+
+.service-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .event-form-wrap {
   background-color: white;
   width: 100%;
