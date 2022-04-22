@@ -1,4 +1,43 @@
 <%= render "shared/header" %>
+<<<<<<< Updated upstream
 <h1>
   トップページ
 </h1>
+=======
+<div class='service-title'>
+  <%= link_to 'そふてに', '/' , class:"title-softeni" %>
+  </div>
+<div class='title-contents'>
+  <div class='tennis-picture'>
+    <%= link_to image_tag("148183.png", class:"tennis-court")%>
+    <%= link_to image_tag("715333.png", class:"chara_bear")%>
+    <%= link_to image_tag("718786.png", class:"chara_rabbit")%>
+  </div>
+</div>
+<div class='event-contents'>
+  <h2 class='title'>イベント一覧</h2>
+  <ul class='event-lists'>
+  <% @events.each do |event| %>
+    <li class='list'>
+    <%= link_to event_path(event.id), method: :get do %>
+    <div class='event-img-content'>
+    <%= image_tag event.image, class: "event-img" %>
+    </div>
+    <div class='event-info'>
+      <h3 class='event-name'>
+        <%= event.event %>
+      </h3>
+      <div class='event-date'>
+        <%= event.date %>
+      </div>
+      <div class='event-venue'>
+        <%= event.venue %>
+      </div>
+    </div>
+    <% end %>
+    </li>
+  <% end %>
+  </ul>
+</div>
+<%= render "shared/footer" %>
+>>>>>>> Stashed changes
