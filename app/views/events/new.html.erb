@@ -1,57 +1,76 @@
-<%= form_with(model: @event, local: true) do |f| %>
-<div class='form-wrap'>
+  <div class='service-title'>
+  <%= link_to 'そふてに', '/' , class:"title-softeni" %>
+  </div>
+<%= form_with model: @events, class: 'event-mein', local: true do |f| %>
+<div class='event-form-wrap'>
   <div class='form-header'>
     <h1 class='form-header-text'>
       投稿する
     </h1>
   </div>
-  <div class="form-group">
+  <div class="event-group">
+  <%= render 'shared/error_messages', model: f.object %>
+  <div class="event-form-group">
+    <div class='form-text-wrap'>
+      <label class="form-image">
+      <span class="image-file">画像</span>
+      <%= f.file_field :image, class: 'hidden' %>
+      </label>
+    </div>
+  </div>
+  <div class="event-form-group">
     <div class='form-text-wrap'>
       <label class="form-text">イベント名</label>
     </div>
     <%= f.text_field :event, class:"input-default", autofocus: true %>
   </div>
-  <div class="form-group">
+  <div class="event-form-group">
     <div class='form-text-wrap'>
       <label class="form-text">シングルス/ダブルス</label>
     </div>
     <%= f.text_field :category, class:"input-default", autofocus: true %>
   </div>
-  <div class="form-group">
+  <div class="event-form-group">
     <div class='form-text-wrap'>
       <label class="form-text">日程</label>
     </div>
     <%= f.text_field :date, class:"input-default", autofocus: true %>
   </div>
-  <div class="form-group">
+  <div class="event-form-group">
     <div class='form-text-wrap'>
       <label class="form-text">都道府県</label>
     </div>
     <%= f.text_field :prefectures, class:"input-default", autofocus: true %>
   </div>
-  <div class="form-group">
+  <div class="event-form-group">
     <div class='form-text-wrap'>
       <label class="form-text">会場</label>
     </div>
     <%= f.text_field :venue, class:"input-default", autofocus: true %>
   </div>
-  <div class="form-group">
+  <div class="event-form-group">
     <div class='form-text-wrap'>
       <label class="form-text">参加費</label>
     </div>
     <%= f.text_field :fee, class:"input-default", autofocus: true %>
   </div>
-  <div class="form-group">
+  <div class="event-form-group">
     <div class='form-text-wrap'>
       <label class="form-text">応募締め切り</label>
     </div>
     <%= f.text_field :deadline, class:"input-default", autofocus: true %>
   </div>
-  <div class="form-group">
+  <div class="event-form-group">
     <div class='form-text-wrap'>
       <label class="form-text">説明</label>
     </div>
-    <%= f.text_area :explanation, class:"input-default", autofocus: true %>
+    <%= f.text_area :explanation, class:"input-default",size:"10x10", autofocus: true %>
+  </div>
+  <div class="event-form-group">
+  <div class="event-btn">
+    <%= f.submit "投稿する" ,class: "event-green-btn" %>
+  </div>
   </div>
 </div>
 <% end %>
+<%= render "shared/footer" %>
