@@ -1,0 +1,57 @@
+<%= form_with(model: @event, local: true) do |f| %>
+<div class='form-wrap'>
+  <div class='form-header'>
+    <h1 class='form-header-text'>
+      投稿する
+    </h1>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">イベント名</label>
+    </div>
+    <%= f.text_field :event, class:"input-default", autofocus: true %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">シングルス/ダブルス</label>
+    </div>
+    <%= f.text_field :category, class:"input-default", autofocus: true %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">日程</label>
+    </div>
+    <%= f.text_field :date, class:"input-default", autofocus: true %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">都道府県</label>
+    </div>
+    <%= f.text_field :prefectures, class:"input-default", autofocus: true %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">会場</label>
+    </div>
+    <%= f.text_field :venue, class:"input-default", autofocus: true %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">参加費</label>
+    </div>
+    <%= f.text_field :fee, class:"input-default", autofocus: true %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">応募締め切り</label>
+    </div>
+    <%= f.text_field :deadline, class:"input-default", autofocus: true %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">説明</label>
+    </div>
+    <%= f.text_area :explanation, class:"input-default", autofocus: true %>
+  </div>
+</div>
+<% end %>
