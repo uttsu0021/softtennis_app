@@ -1,4 +1,4 @@
-<%= form_with(model: @event, url: new_event_path, class: 'event-mein', local: true) do |f| %>
+<%= form_with(model: @events, class: 'event-mein', local: true) do |f| %>
 <div class='event-form-wrap'>
   <div class='form-header'>
     <h1 class='form-header-text'>
@@ -61,6 +61,11 @@
       <label class="form-text">説明</label>
     </div>
     <%= f.text_area :explanation, class:"input-default",size:"10x10", autofocus: true %>
+  </div>
+
+  <div class="event-form-group">
+  <div class="event-btn">
+    <%= f.submit "投稿する" ,class: "event-green-btn" %>
   </div>
  </div>
 </div>
