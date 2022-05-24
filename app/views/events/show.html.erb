@@ -1,0 +1,58 @@
+<%= render "shared/header" %>
+<div class="event-show">
+  <div class="event-box">
+    <div class='event-img-content'>
+      <%= image_tag @event.image ,class:"event-box-img" %>
+    </div>
+    <h2 class="name">
+      <%=  @event.event %>
+    </h2>
+
+    <% if user_signed_in? %>
+      <% if current_user.id == @event.user_id%>
+    <%= link_to '商品の編集', edit_event_path, method: :get, class: "event-red-btn" %>
+    <p class='or-text'>or</p>
+    <%= link_to '削除', event_path(@event.id) , method: :delete, class:'event-destroy' %>
+      <%else%>
+    <%#= link_to '申し込む', item_buys_path(@item.id) ,class:"event-red-btn"%>
+      <% end %>
+    <% end %>
+
+    <div class="event-explain-box">
+      <span><%= @event.explanation %></span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">出品者</th>
+          <td class="detail-value"><%= @event.user.nickname %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">シングルス/ダブルス</th>
+          <td class="detail-value"><%= @event.category %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">日程</th>
+          <td class="detail-value"><%= @event.date %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">都道府県</th>
+          <td class="detail-value"><%= @event.prefectures %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">会場</th>
+          <td class="detail-value"><%= @event.venue %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">参加費</th>
+          <td class="detail-value"><%= @event.fee %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">応募締め切り</th>
+          <td class="detail-value"><%= @event.deadline %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<%= render "shared/footer" %>
