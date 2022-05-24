@@ -1,3 +1,17 @@
+
+.title-softeni {
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+}
+
+.service-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .event-form-wrap {
   background-color: white;
   width: 100%;
@@ -17,13 +31,17 @@
   padding-bottom: 100px;
 }
 
-.event-green-btn {  
+.event-green-btn {
   width: 100%;
   background: green;
   border: 2px solid green;
   color: #fff;
-  line-height:  48px;
+  line-height: 48px;
   font-size: 14px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.field_with_errors {
+  display: contents;
 }
