@@ -10,7 +10,6 @@
 .event-box {
   background-color: #FFF;
   width: 70vw;
-  min-width: 1200px;
   padding: 10vh 15vw;
   display: flex;
   flex-direction: column;
@@ -64,7 +63,7 @@
   width: 100%;
 }
 
-.detail-event {
+.detail-item {
   width: 20%;
   background-color: #eee;
   border: 1px solid #dedede;
