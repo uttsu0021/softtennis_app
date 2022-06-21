@@ -39,9 +39,10 @@ class EventsController < ApplicationController
     redirect_to root_path
   end
 
+
   private
 
   def event_params
-    params.require(:event).permit(:image,:event,:category,:date,:prefectures,:venue,:fee,:deadline,:explanation,)
+    params.require(:event).permit(:image,:event,:category,:date,:prefectures,:venue,:fee,:deadline,:explanation,).merge(user_id: current_user.id)
   end
 end
