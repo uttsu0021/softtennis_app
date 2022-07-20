@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2022_06_14_235713) do
     t.string "address", null: false
     t.string "phone", null: false
     t.string "group"
-    t.string "record"
+    t.string "battle_record"
     t.bigint "user_id", null: false
     t.bigint "event_id", null: false
     t.datetime "created_at", precision: 6, null: false

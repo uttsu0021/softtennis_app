@@ -9,7 +9,7 @@ class CreateEntries < ActiveRecord::Migration[6.0]
       t.string :address,        null: false
       t.string :phone,          null: false
       t.string :group
-      t.string :record
+      t.string :battle_record
       t.references :user,       null: false, foreign_key: true
       t.references :event,      null: false, foreign_key: true
       t.timestamps
