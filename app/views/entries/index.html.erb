@@ -1,0 +1,100 @@
+<%= render "shared/second-header"%>
+<div class='transaction-contents'>
+  <div class='transaction-main'>
+    <h1 class='transaction-title-text'>
+      申し込み内容の確認
+    </h1>
+    <%# 購入内容の表示 %>
+    <div class='buy-item-info'>
+      <%= image_tag @event.image, class: 'buy-item-img' %>
+      <div class='buy-item-right-content'>
+        <h2 class='buy-item-text'>
+          <%= @event.event %>
+        </h2>
+        <div class='buy-item-price'>
+          <p class='item-price-text'>¥<%= @event.category %></p>
+        </div>
+      </div>
+    </div>
+    <%# /購入内容の表示 %>
+  <%= form_with model: @entry, url: event_entries_path, id: 'charge-form', class: 'transaction-form-wrap', local: true do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+    <%# 配送先の入力 %>
+    <div class='shipping-address-form'>
+      <h1 class='info-input-haedline'>
+        選手情報入力
+      </h1>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">名字</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :last_name, class:"input-default", id:"city", placeholder:"例）山田"%>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">名前</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :first_name, class:"input-default", id:"addresses", placeholder:"例）太郎"%>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">名字(カタカナ)</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :last_name_kata, class:"input-default", id:"building", placeholder:"例）ヤマダ"%>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">名前(カタカナ)</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :first_name_kata, class:"input-default", id:"building", placeholder:"例）タロウ"%>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">郵便番号</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :postal_code, class:"input-default", id:"postal-code", placeholder:"例）123-4567", maxlength:"8" %>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">住所</label>
+          <span class="indispensable">必須</span>
+        </div>
+          <%= f.text_field :address, class:"input-default", id:"city", placeholder:"例）〇〇県〇〇市〇〇1-1-1 〇〇ビル101"%>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">電話番号</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :phone, class:"input-default", id:"phone-number", placeholder:"例）09012345678",maxlength:"11"%>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">所属クラブ</label>
+          <span class="form-any">任意</span>
+        </div>
+        <%= f.text_field :group, class:"input-default", id:"building", placeholder:"例）〇〇クラブ"%>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">戦績</label>
+          <span class="form-any">任意</span>
+        </div>
+        <%= f.text_field :battle_record, class:"input-default", id:"building", placeholder:"例）〇〇大会優勝"%>
+      </div>
+    </div>
+
+    <%# /配送先の入力 %>
+    <div class='buy-btn'>
+      <%= f.submit "申し込む" ,class:"buy-red-btn" %>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer"%>
