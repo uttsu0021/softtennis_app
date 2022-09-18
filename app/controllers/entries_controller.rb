@@ -1,12 +1,12 @@
 class EntriesController < ApplicationController
   def index
     @event = Event.find(params[:event_id])
-    @entries = Entry.new
+    @entry = Entry.new
   end
 
   def create
     @event = Event.find(params[:event_id])
-    @entry = entry.new(entry_params)
+    @entry = Entry.new(entry_params)
     if @entry.save
       redirect_to root_path
     else
