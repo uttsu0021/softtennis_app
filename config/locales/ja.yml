@@ -1,0 +1,23 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+        nickname: ニックネーム
+     event:
+        event: イベント名/大会名
+        category: シングルスかダブルス
+        date: 日程
+        prefectures: 都道府県
+        venue: 会場
+        fee: 参加費
+        deadline: 応募締め切り
+        explanation: 説明
+        image : 画像
+     entry:
+        last_name: 名字
+        first_name: 名前
+        last_name_kata: 名字カタカナ
+        first_name_kata: 名前カタカナ
+        postal_code: 郵便番号
+        address: 住所
+        phone: 電話番号

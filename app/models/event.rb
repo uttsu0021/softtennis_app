@@ -13,5 +13,6 @@ class Event < ApplicationRecord
     validates :fee
     validates :deadline
     validates :explanation
+    validates :image
   end
 end
