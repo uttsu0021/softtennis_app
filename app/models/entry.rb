@@ -13,8 +13,8 @@ class Entry < ApplicationRecord
 
   with_options presence: true do
     validates :postal_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'は無効です。ハイフンを含めてください' }
-    validates :phone, format: { with: /\A\d{11}\z/, message: 'は数字のみ入力してください' }
     validates :address
+    validates :phone, format: { with: /\A\d{11}\z/, message: 'は半角数字のみ入力してください' }
     validates :user_id
     validates :event_id
   end
