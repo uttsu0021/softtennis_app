@@ -5,6 +5,7 @@ class Event < ApplicationRecord
   has_many :entries
 
   with_options presence: true do
+    validates :image
     validates :event
     validates :category
     validates :date
@@ -13,6 +14,5 @@ class Event < ApplicationRecord
     validates :fee
     validates :deadline
     validates :explanation
-    validates :image
   end
 end
