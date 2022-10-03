@@ -18,7 +18,7 @@ class EntriesController < ApplicationController
   private
 
   def entry_params
-    params.require(:entry).permit(:last_name, :first_name, :last_name_kata, :first_name_kata, :postal_code, :address, :phone, :group, :record).merge(user_id: current_user.id, event_id: params[:event_id])
+    params.require(:entry).permit(:last_name, :first_name, :last_name_kata, :first_name_kata, :postal_code, :address, :phone, :group, :battle_record).merge(user_id: current_user.id, event_id: params[:event_id])
   end
 
   def set_event
