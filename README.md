@@ -41,7 +41,7 @@
 | address            | string     | null: false                   |
 | phone              | integer    | null: false                   |
 | group              | string     |                               |
-| record             | string     |                               |
+| battle_record             | string     |                               |
 | user               | references | null: false, foreign_key: true|
 | event              | references | null: false, foreign_key: true|
 #### イベントがダブルスだった場合以下も含む

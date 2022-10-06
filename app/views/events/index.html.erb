@@ -5,9 +5,7 @@
   </div>
 <div class='title-contents'>
   <div class='tennis-picture'>
-    <%= link_to image_tag("148183.png", class:"tennis-court")%>
-    <%= link_to image_tag("715333.png", class:"chara_bear")%>
-    <%= link_to image_tag("718786.png", class:"chara_rabbit")%>
+    <%= link_to image_tag("a048ed7dabbbe4ed073e882f542f70fc_t.jpeg", class:"tennis-court")%>
   </div>
 </div>
 <div class='event-contents'>
@@ -28,6 +26,10 @@
       </div>
       <div class='event-venue'>
         <%= event.venue %>
+      </div>
+      <div class='event-entries'>
+          参加組数
+        <%= event.entries.count %>
       </div>
     </div>
     <% end %>

@@ -58,24 +58,12 @@
 }
 
 .tennis-picture {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8%;
 }
 
 .tennis-court {
   width:100%;
-}
-.chara_bear {
-  position: absolute;
-  width: 40%;
-  height: 40%;
-  top: 10%;
-  left: 5%;
-}
-
-.chara_rabbit {
-  position: absolute;
-  width: 40%;
-  height: 40%;
-  bottom: 20%;
-  right: 5%;
 }
